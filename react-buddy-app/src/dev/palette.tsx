@@ -9,7 +9,7 @@ import {
 export default () => (
   <Palette>
     <Category name="Text">
-      <Component name="Hello meessage">
+      <Component name="Hello message">
         <Variant>
           <span> Hello, Create React Buddy App! </span>
         </Variant>
