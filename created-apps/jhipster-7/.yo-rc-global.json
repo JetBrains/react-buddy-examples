@@ -1,0 +1,8 @@
+{
+  "generator-jhipster:7.6.0": {
+    "promptValues": {
+      "packageName": "com.example.jh",
+      "nativeLanguage": "en"
+    }
+  }
+}
