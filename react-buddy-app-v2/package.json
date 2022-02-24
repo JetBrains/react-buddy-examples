@@ -1,0 +1,49 @@
+{
+  "name": "react-buddy-app-v2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-buddy/ide-toolbox": "2.0.0-dev.2",
+    "@react-buddy/react-scripts": "^5.0.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.25",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.5",
+    "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "@react-buddy/ide-devtools": "1.1.1-dev.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:devmode": "cross-env REACT_APP_IDE_DEVMODE=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
