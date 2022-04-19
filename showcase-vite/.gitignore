@@ -3,4 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
-.idea
+.idea/*
+!.idea/rcb-settings.xml
