@@ -2,6 +2,7 @@ import React from 'react';
 import {ComponentPreview, Previews} from '@react-buddy/ide-toolbox';
 import {PaletteTree} from './palette';
 import App from "../App";
+import {HooksDemoComponent} from "../demo/hooks";
 
 const ComponentPreviews = () => {
   return (
@@ -9,6 +10,9 @@ const ComponentPreviews = () => {
         <ComponentPreview path="/App">
             <App/>
         </ComponentPreview>
+      <ComponentPreview path="/HooksDemoComponent">
+        <HooksDemoComponent/>
+      </ComponentPreview>
     </Previews>
   );
 };
