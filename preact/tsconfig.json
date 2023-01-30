@@ -6,7 +6,7 @@
         // "lib": [],                             /* Specify library files to be included in the compilation:  */
         "allowJs": true,                          /* Allow javascript files to be compiled. */
         // "checkJs": true,                       /* Report errors in .js files. */
-        "jsx": "react",                           /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+        "jsx": "react-jsx",                      /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
         "jsxFactory": "h",                        /* Specify the JSX factory function to use when targeting react JSX emit, e.g. React.createElement or h. */
         "jsxFragmentFactory": "Fragment",         /* Specify the JSX fragment factory function to use when targeting react JSX emit with jsxFactory compiler option is specified, e.g. Fragment. */
         // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
@@ -58,7 +58,14 @@
         // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
         /* Advanced Options */
-        "skipLibCheck": true                      /* Skip type checking of declaration files. */
+        "skipLibCheck": true, /* Skip type checking of declaration files. */
+        "jsxImportSource": "preact",
+        "types": ["preact"],
+        "lib": [
+          "dom",
+          "es5",
+          "es2015.promise"
+        ]
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*"],
 }
