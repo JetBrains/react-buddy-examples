@@ -11,6 +11,8 @@ import {
 
 import { getUser } from "./session.server";
 import tailwindStylesheetUrl from "./styles/tailwind.css";
+import { DevSupport } from "@react-buddy/ide-toolbox";
+import { ComponentPreviews } from "../dev";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -36,10 +38,14 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <DevSupport ComponentPreviews={ComponentPreviews}>
+          <>
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </>
+        </DevSupport>
       </body>
     </html>
   );
