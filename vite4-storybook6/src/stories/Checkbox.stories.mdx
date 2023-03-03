@@ -1,0 +1,59 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs';
+
+import {Checkbox} from './Checkbox';
+
+<Meta title="Example/Checkbox" component={Checkbox}/>
+
+export const Template = (args) => <Checkbox {...args}/>;
+
+<Canvas>
+  <Story
+    name="Outer story"
+    args={{
+      label: 'Outer'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Unchecked"
+    args={{
+      label: 'Unchecked',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Checked"
+    args={{
+      label: 'Checked',
+      checked: true,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary"
+    args={{
+      label: 'Secondary',
+      checked: true,
+      appearance: 'secondary',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With JSX children"
+    args={{
+      label: 'jsx children',
+      appearance: 'secondary',
+      children: <label>Additional label</label>
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With String children"
+    args={{
+      label: 'jsx children',
+      appearance: 'secondary',
+      children: 'I am a child!'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
