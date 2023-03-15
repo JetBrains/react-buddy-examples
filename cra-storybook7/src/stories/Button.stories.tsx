@@ -7,6 +7,7 @@ const meta = {
   title: 'Example/Button',
   component: Button,
   tags: ['autodocs'],
+  //render: (args) => <Button label={"Default render"}/>,
   args: {
     label: "Default label"
   },
@@ -18,10 +19,6 @@ const meta = {
       options: ['1px', '2px', '5px', '10px'],
       control: {type: 'select'}
     },
-  },
-  parameters: {
-
-
   }
 } satisfies Meta<typeof Button>;
 
@@ -36,13 +33,18 @@ export const Primary: Story = {
   }
 };
 
-export const SpreadPrimary: Story = {
-  ...Primary
-};
 
 export const Secondary: Story = {
   args: {
     label: 'Secondary',
+  },
+};
+
+export const Spread: Story = {
+  ...Primary,
+  args: {
+    ...Secondary.args,
+    size: "medium"
   },
 };
 
