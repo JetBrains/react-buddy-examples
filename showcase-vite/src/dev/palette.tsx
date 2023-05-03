@@ -5,9 +5,39 @@ import {
   Variant,
   Palette,
 } from '@react-buddy/ide-toolbox';
+import {FormTemplate} from "../templates/FormTemplate";
+import {CardListTemplate} from "../templates/CardListTemplate";
+import {TableTemplate} from "../templates/TableTemplate";
+import {CardObjectTemplate} from "../templates/CardObjectTemplate";
+import {CodeAndJsxPrototype, JsxPrototype, CodePrototype} from "../templates/JsxPrototype";
 
 export const PaletteTree = () => (
   <Palette>
+    <Category name="Templates">
+      <Component name="CardList">
+        <Variant proto={CardListTemplate}/>
+      </Component>
+      <Component name="CardObject">
+        <Variant proto={CardObjectTemplate}/>
+      </Component>
+      <Component name="Form">
+        <Variant proto={FormTemplate}/>
+      </Component>
+      <Component name="Table">
+        <Variant proto={TableTemplate}/>
+      </Component>
+    </Category>
+    <Category name={"Prototype Demo"}>
+      <Component name="Only jsx">
+        <Variant proto={JsxPrototype}/>
+      </Component>
+      <Component name="Only code content">
+        <Variant proto={CodePrototype}/>
+      </Component>
+      <Component name="Jsx and code content">
+        <Variant proto={CodeAndJsxPrototype}/>
+      </Component>
+    </Category>
     <Category name="HTML">
       <Component name="a">
         <Variant requiredParams={['href']}>
