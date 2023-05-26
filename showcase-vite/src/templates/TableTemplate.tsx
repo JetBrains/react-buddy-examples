@@ -8,67 +8,96 @@ import {Sex, User} from "../types";
  * For more information follow https://youtrack.haulmont.com/issue/RCB-467/Table-template-support
  **/
 export const TableTemplate = () => {
+  const itemsVariableType = "/*vtl $table.itemsVariableType*/"
+  const itemType = "/*vtl $table.itemType*/"
+  const fixedColumnName = "/*vtl ${sQuote}$table.fixedColumn${sQuote}*/"
+  const fixedHeader = "/*vtl $table.fixedHeader*/"
+  const expandableRow = "/*vtl $table.expandableRow*/"
+  const rowSize = "/*vtl ${sQuote}$table.rowSize${sQuote}*/"
+  const stripes = "/*vtl $table.stripes*/"
 
-    const columns: ColumnsType<"/*vtl $table.itemType*/"> = [
-        /*vtl #foreach($property in $table.columnProperties)*/
-        {
-            title: "/*vtl ${sQuote}$property.title${sQuote}*/",
-            dataIndex: "/*vtl ${sQuote}$property.name${sQuote}*/",
-            key: "/*vtl ${sQuote}$property.name${sQuote}*/",
-            /*vtl #if($property.filtration == "true")*/
-            /*vtl #if($property.dataType == "string")*/
-            /*vtl filters: ${table.itemsVariableName}.map((item) => ({
-                text: item.${property.name},
-                value: item.${property.name}
-            })),
-            onFilter: (value, record) => record.${property.name}.includes(value as string),*/
-            /*vtl #elseif($property.dataType == "boolean")*/
-            /*vtl filters: [
-                {
-                    text: "true",
-                    value: "true"
-                },
-                {
-                    text: "false",
-                    value: "false"
-                }
-            ],
-            onFilter: (value, record) => String(record.${property.name}) == value,*/
-            /*vtl #elseif($property.dataType == "number")*/
-            /*vtl filters: ${table.itemsVariableName}.map((item) => ({
-                text: item.${property.name},
-                value: item.${property.name}
-            })),
-            onFilter: (value, record) => record.${property.name} == value,*/
-            /*vtl #elseif($property.dataType == "object")*/
+  /*Sort properties:*/
+  /*vtl const sortProperties: string[] = [*/
+  /*vtl #foreach($property in $table.sortProperties)*/
+  /*vtl $quote${property.name}$quote#if( $foreach.hasNext ),$newline#end */
+  /*vtl #end*/
+  /*vtl $newline]*/
 
-            /*vtl #end*/
-            /*vtl #if($property.filterSearch == "true")*/
-            /*vtl filterSearch: true,*/
-            /*vtl #end*/
-            /*vtl #end*/
-            /*vtl #if($property.sorting == "true")*/
-            /*vtl #if($property.dataType == "string")*/
-            /*vtl sorter: (a, b) => (a.${property.name} > b.${property.name} ? -1 : 1),*/
-            /*vtl #elseif($property.dataType == "boolean")*/
-            /*vtl sorter: (a, b) => (Number(a.${property.name}) - Number(b.${property.name})),*/
-            /*vtl #elseif($property.dataType == "number")*/
-            /*vtl sorter: (a, b) => a.${property.name} - b.${property.name},*/
-            /*vtl #elseif($property.dataType == "object")*/
+  /*Filter properties:*/
+  /*vtl const filteredProperties: string[] = [*/
+  /*vtl #foreach($property in $table.filterProperties)*/
+  /*vtl $sQuote${property.name}$sQuote#if( $foreach.hasNext ),$newline#end */
+  /*vtl #end*/
+  /*vtl $newline]*/
 
-            /*vtl #end*/
+  /*Expand if set properties:*/
+  /*vtl const expandIfSet: string[] = [*/
+  /*vtl #foreach($property in $table.expandIfSet)*/
+  /*vtl $quote${property.name}$quote#if( $foreach.hasNext ),$newline#end */
+  /*vtl #end*/
+  /*vtl $newline]*/
 
-            /*vtl #end*/
-            /*vtl #if($property.fixedColumn != "false")*/
-            /*vtl fixed: $property.fixedColumn,*/
-            /*vtl #end*/
-        },
-        /*vtl #end*/
-    ];
+  /*Display in expand properties:*/
+  /*vtl const displayInExpand: string[] = [*/
+  /*vtl #foreach($property in $table.displayInExpand)*/
+  /*vtl $sQuote${property.name}$sQuote#if( $foreach.hasNext ),$newline#end */
+  /*vtl #end*/
+  /*vtl $newline]*/
 
-    return <Table /*vtl #if($table.hierarchyProperty != "")expandable={{
-                    childrenColumnName: "${table.hierarchyProperty}"
-                }}#end columns={columns} dataSource={$table.itemsVariableName}*/></Table>
+  /*All properties:*/
+  /*vtl const allProperties: string[] = [#foreach($property in $table.allProperties)$sQuote${property.name}$sQuote#if( $foreach.hasNext ), #end#end]*/
+
+
+  const columns: ColumnsType<"/*vtl $table.itemType*/"> = [
+    /*vtl #foreach($property in $table.itemProperties)*/
+    {
+      title: "/*vtl ${sQuote}$property.title${sQuote}*/",
+      dataIndex: "/*vtl ${sQuote}$property.name${sQuote}*/",
+      key: "/*vtl ${sQuote}$property.name${sQuote}*/",
+      /*vtl #if($property.filtered == "true")*/
+      /*vtl #if($property.dataType == "string")*/
+      /*vtl filters: ${table.itemsVariableName}.map((item) => ({
+          text: item.${property.name},
+          value: item.${property.name}
+      })),
+      onFilter: (value, record) => record.${property.name}.includes(value as string),*/
+      /*vtl #elseif($property.dataType == "boolean")*/
+      /*vtl filters: [
+          {
+              text: "true",
+              value: "true"
+          },
+          {
+              text: "false",
+              value: "false"
+          }
+      ],
+      onFilter: (value, record) => String(record.${property.name}) == value,*/
+      /*vtl #elseif($property.dataType == "number")*/
+      /*vtl filters: ${table.itemsVariableName}.map((item) => ({
+          text: item.${property.name},
+          value: item.${property.name}
+      })),
+      onFilter: (value, record) => record.${property.name} == value,*/
+      /*vtl #elseif($property.dataType == "object")*/
+
+      /*vtl #end*/
+      /*vtl #end*/
+      /*vtl #if($property.sorted == "true")*/
+      /*vtl #if($property.dataType == "string")*/
+      /*vtl sorter: (a, b) => (a.${property.name} > b.${property.name} ? -1 : 1),*/
+      /*vtl #elseif($property.dataType == "boolean")*/
+      /*vtl sorter: (a, b) => (Number(a.${property.name}) - Number(b.${property.name})),*/
+      /*vtl #elseif($property.dataType == "number")*/
+      /*vtl sorter: (a, b) => a.${property.name} - b.${property.name},*/
+      /*vtl #elseif($property.dataType == "object")*/
+      /*vtl #end*/
+      /*vtl #end*/
+    },
+    /*vtl #end*/
+  ];
+
+  return <Table /*vtl columns={columns} dataSource={$table.itemsVariableName}*/></Table>
 };
 
 const TableTestComponent = () => {
