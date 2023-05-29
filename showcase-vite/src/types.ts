@@ -11,4 +11,6 @@ export type User = {
   email: string
   isAlive: boolean
   sex: Sex
+  liveHappyLife: () => {}
+  liveUnhappyLife: Function
 }

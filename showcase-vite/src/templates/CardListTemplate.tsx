@@ -31,6 +31,9 @@ export const CardListTemplate = () => {
   /*vtl const isPageable = $card.pagination*/
   /*vtl const rowsPerPage =#if( $card.rowsPerPage ) $card.rowsPerPage#else 0 #end */
 
+  /*Actions:*/
+  /*vtl const actions: string[] = [#foreach($action in $card.actions)$sQuote${action.name} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
+
   return (
     <>
       All displayed properties:
@@ -65,7 +68,9 @@ const CardListTestComponent = () => {
       age: 27,
       email: "a.ivanov@gmail.com",
       isAlive: true,
-      sex: Sex.MAN
+      sex: Sex.MAN,
+      liveHappyLife: () => { return {} },
+      liveUnhappyLife: Function
     },
     {
       id: 2,
@@ -74,7 +79,9 @@ const CardListTestComponent = () => {
       age: 46,
       email: "p.petrov@gmail.com",
       isAlive: true,
-      sex: Sex.MAN
+      sex: Sex.MAN,
+      liveHappyLife: () => { return {} },
+      liveUnhappyLife: Function
     },
     {
       id: 3,
@@ -83,7 +90,9 @@ const CardListTestComponent = () => {
       age: 40,
       email: "a.petrova@gmail.com",
       isAlive: true,
-      sex: Sex.WOMAN
+      sex: Sex.WOMAN,
+      liveHappyLife: () => { return {} },
+      liveUnhappyLife: Function
     }
   ]);
 

@@ -47,6 +47,8 @@ export const TableTemplate = () => {
   /*All properties:*/
   /*vtl const allProperties: string[] = [#foreach($property in $table.allProperties)$sQuote${property.name}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
+  /*Actions:*/
+  /*vtl const actions: string[] = [#foreach($action in $table.actions)$sQuote${action.name} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
   const columns: ColumnsType<"/*vtl $table.itemType*/"> = [
     /*vtl #foreach($property in $table.itemProperties)*/
@@ -102,6 +104,9 @@ export const TableTemplate = () => {
 
 const TableTestComponent = () => {
 
+  const [str, setStr] = useState<string>("");
+  const [arrStr, setArrStr] = useState<string[]>([]);
+
   const [data, setData] = useState<User[] | undefined>([
     {
       id: 1,
@@ -110,7 +115,9 @@ const TableTestComponent = () => {
       age: 27,
       email: "a.ivanov@gmail.com",
       isAlive: true,
-      sex: Sex.MAN
+      sex: Sex.MAN,
+      liveHappyLife: () => { return {} },
+      liveUnhappyLife: Function
     },
     {
       id: 2,
@@ -119,7 +126,9 @@ const TableTestComponent = () => {
       age: 46,
       email: "p.petrov@gmail.com",
       isAlive: true,
-      sex: Sex.MAN
+      sex: Sex.MAN,
+      liveHappyLife: () => { return {} },
+      liveUnhappyLife: Function
     },
     {
       id: 3,
@@ -128,7 +137,9 @@ const TableTestComponent = () => {
       age: 40,
       email: "a.petrova@gmail.com",
       isAlive: true,
-      sex: Sex.WOMAN
+      sex: Sex.WOMAN,
+      liveHappyLife: () => { return {} },
+      liveUnhappyLife: Function
     }
   ]);
 
