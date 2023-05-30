@@ -10,6 +10,7 @@ import {CardListTemplate} from "../templates/CardListTemplate";
 import {TableTemplate} from "../templates/TableTemplate";
 import {CardObjectTemplate} from "../templates/CardObjectTemplate";
 import {CodeAndJsxPrototype, JsxPrototype, CodePrototype} from "../templates/JsxPrototype";
+import {TreeTableTemplate} from "../templates/TreeTableTemplate";
 
 export const PaletteTree = () => (
   <Palette>
@@ -25,6 +26,9 @@ export const PaletteTree = () => (
       </Component>
       <Component name="Table">
         <Variant proto={TableTemplate}/>
+      </Component>
+      <Component name="TreeTable">
+        <Variant proto={TreeTableTemplate}/>
       </Component>
     </Category>
     <Category name={"Prototype Demo"}>
