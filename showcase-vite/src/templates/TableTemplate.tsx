@@ -48,7 +48,7 @@ export const TableTemplate = () => {
   /*vtl const allProperties: string[] = [#foreach($property in $table.allProperties)$sQuote${property.name}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
   /*Actions:*/
-  /*vtl const actions: string[] = [#foreach($action in $table.actions)$sQuote${action.name} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
+  /*vtl const actions: string[] = [#foreach($action in $table.actions)$sQuote${action.type} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
   const columns: ColumnsType<"/*vtl $table.itemType*/"> = [
     /*vtl #foreach($property in $table.itemProperties)*/
