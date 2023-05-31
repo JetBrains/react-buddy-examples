@@ -16,6 +16,9 @@ export const TreeTableTemplate = () => {
   const expandableRow = "/*vtl $table.expandableRow*/"
   const rowSize = "/*vtl ${sQuote}$table.rowSize${sQuote}*/"
   const stripes = "/*vtl $table.stripes*/"
+  /*Pagination:*/
+  /*vtl const isPageable = $table.pagination*/
+  /*vtl const rowsPerPage =#if( $table.rowsPerPage ) $table.rowsPerPage#else 0 #end */
 
   /*Sort properties:*/
   /*vtl const sortProperties: string[] = [*/
@@ -49,7 +52,7 @@ export const TreeTableTemplate = () => {
   /*vtl const allProperties: string[] = [#foreach($property in $table.allProperties)$sQuote${property.name}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
   /*Actions:*/
-  /*vtl const actions: string[] = [#foreach($action in $table.actions)$sQuote${action.type} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
+  /*vtl const actions: string[] = [#foreach($action in $table.actions)$sQuote${action.id} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
   const columns: ColumnsType<"/*vtl $table.itemType*/"> = [
     /*vtl #foreach($property in $table.itemProperties)*/

@@ -32,7 +32,7 @@ export const CardListTemplate = () => {
   /*vtl const rowsPerPage =#if( $card.rowsPerPage ) $card.rowsPerPage#else 0 #end */
 
   /*Actions:*/
-  /*vtl const actions: string[] = [#foreach($action in $card.actions)$sQuote${action.type} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
+  /*vtl const actions: string[] = [#foreach($action in $card.actions)$sQuote${action.id} - ${action.label}$sQuote#if( $foreach.hasNext ), #end#end]*/
 
   return (
     <>
