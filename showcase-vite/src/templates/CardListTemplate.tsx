@@ -9,7 +9,7 @@ export const CardListTemplate = () => {
 
   /*vtl const testState: ${card.itemsVariableType} = ${card.itemsVariableName}*/
   /*vtl const testItemType: ${card.itemType} = ${card.itemsVariableName}[0]*/
-
+  /*vtl const titleProperty = $quote${card.titleProperty.name}$quote*/
   /*Sort properties:*/
   /*vtl const sortProperties: string[] = [*/
   /*vtl #foreach($property in $card.sortProperties)*/

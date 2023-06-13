@@ -10,7 +10,7 @@ import {Sex, User} from "../types";
 export const TableTemplate = () => {
   const itemsVariableType = "/*vtl $table.itemsVariableType*/"
   const itemType = "/*vtl $table.itemType*/"
-  const fixedColumnName = "/*vtl ${sQuote}$table.fixedColumn${sQuote}*/"
+  const fixedColumnName = "/*vtl ${sQuote}${table.fixedColumn.name}${sQuote}*/"
   const fixedHeader = "/*vtl $table.fixedHeader*/"
   const expandableRow = "/*vtl $table.expandableRow*/"
   const rowSize = "/*vtl ${sQuote}$table.rowSize${sQuote}*/"
