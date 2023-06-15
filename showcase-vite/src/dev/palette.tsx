@@ -11,6 +11,7 @@ import {TableTemplate} from "../templates/TableTemplate";
 import {CardObjectTemplate} from "../templates/CardObjectTemplate";
 import {CodeAndJsxPrototype, JsxPrototype, CodePrototype} from "../templates/JsxPrototype";
 import {TreeTableTemplate} from "../templates/TreeTableTemplate";
+import {ModalDialogTemplate} from "../templates/ModalDialogTemplate";
 
 export const PaletteTree = () => (
   <Palette>
@@ -29,6 +30,9 @@ export const PaletteTree = () => (
       </Component>
       <Component name="TreeTable">
         <Variant proto={TreeTableTemplate}/>
+      </Component>
+      <Component name="Dialog">
+        <Variant proto={ModalDialogTemplate}/>
       </Component>
     </Category>
     <Category name={"Prototype Demo"}>

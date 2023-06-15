@@ -4,8 +4,8 @@
     <option name="devServerConfigs">
       <DevServerState>
         <option name="packageJsonPath" value="$PROJECT_DIR$/package.json" />
-        <option name="port" value="3000" />
         <option name="scriptName" value="dev" />
+        <option name="url" value="http://127.0.0.1:3000" />
       </DevServerState>
     </option>
   </component>
