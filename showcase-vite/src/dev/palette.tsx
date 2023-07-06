@@ -8,7 +8,7 @@ import {
 import {FormTemplate} from "../templates/FormTemplate";
 import {CardListTemplate} from "../templates/CardListTemplate";
 import {TableTemplate} from "../templates/TableTemplate";
-import {CardObjectTemplate} from "../templates/CardObjectTemplate";
+import {CardTemplate} from "../templates/CardTemplate";
 import {CodeAndJsxPrototype, JsxPrototype, CodePrototype} from "../templates/JsxPrototype";
 import {TreeTableTemplate} from "../templates/TreeTableTemplate";
 import {ModalDialogTemplate} from "../templates/ModalDialogTemplate";
@@ -20,7 +20,7 @@ export const PaletteTree = () => (
         <Variant proto={CardListTemplate}/>
       </Component>
       <Component name="CardObject">
-        <Variant proto={CardObjectTemplate}/>
+        <Variant proto={CardTemplate}/>
       </Component>
       <Component name="Form">
         <Variant proto={FormTemplate}/>
