@@ -2,7 +2,7 @@ import React from "react";
 import {Sex, User} from "../types";
 
 /** Current template demonstrates how you can define a react component by the velocity parameter properties.
- * To see the result of the processed template try to drag and drop it from React palette (Templates -> CardObject) to {@link CardObjectTestComponent} div element.
+ * To see the result of the processed template try to drag and drop it from React palette (Templates -> CardObject) to {@link CardTestComponent} div element.
  * For more information follow https://youtrack.haulmont.com/issue/RCB-468/Object-card-template-wizard
  **/
 export const CardTemplate = () => {
@@ -37,8 +37,7 @@ export const CardTemplate = () => {
   );
 };
 
-
-export const CardObjectTestComponent = () => {
+export const CardTestComponent = () => {
 
   const cardData: User = {
     id: 2,
@@ -48,10 +47,12 @@ export const CardObjectTestComponent = () => {
     email: "p.petrov@gmail.com",
     isAlive: true,
     sex: Sex.MAN,
-    liveHappyLife: () => {
+    profession: "Software Developer",
+    salary: 200000,
+    testFunction1: () => {
       return {};
     },
-    liveUnhappyLife: Function
+    testFunction2: Function
   };
 
   return (

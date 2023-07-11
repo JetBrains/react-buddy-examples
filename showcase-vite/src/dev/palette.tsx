@@ -12,6 +12,10 @@ import {CardTemplate} from "../templates/CardTemplate";
 import {CodeAndJsxPrototype, JsxPrototype, CodePrototype} from "../templates/JsxPrototype";
 import {TreeTableTemplate} from "../templates/TreeTableTemplate";
 import {ModalDialogTemplate} from "../templates/ModalDialogTemplate";
+import {LineChartTemplate} from "../templates/charts/LineChartTemplate";
+import {ScatterChartTemplate} from "../templates/charts/ScatterChartTemplate";
+import {BarChartTemplate, ColumnBarChartTemplate} from "../templates/charts/BarChartTemplate";
+import {PieChartTemplate} from "../templates/charts/PieChartTemplate";
 
 export const PaletteTree = () => (
   <Palette>
@@ -33,6 +37,13 @@ export const PaletteTree = () => (
       </Component>
       <Component name="Dialog">
         <Variant proto={ModalDialogTemplate}/>
+      </Component>
+      <Component name="Charts">
+        <Variant name="Line" proto={LineChartTemplate}/>
+        <Variant name="Scatter" proto={ScatterChartTemplate}/>
+        <Variant name="Bar" proto={BarChartTemplate}/>
+        <Variant name="Column" proto={ColumnBarChartTemplate}/>
+        <Variant name="Pie" proto={PieChartTemplate}/>
       </Component>
     </Category>
     <Category name={"Prototype Demo"}>

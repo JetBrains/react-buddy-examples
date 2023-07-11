@@ -113,36 +113,36 @@ const TableTestComponent = () => {
   const [data, setData] = useState<User[] | undefined>([
     {
       id: 1,
-      firstName: "Andrey",
-      lastName: "Ivanov",
-      age: 27,
-      email: "a.ivanov@gmail.com",
+      firstName: "Petr",
+      lastName: "Petrov",
+      age: 23,
+      email: "p.petrov@gmail.com",
       isAlive: true,
+      profession: "Middle Software Developer",
       sex: Sex.MAN,
-      liveHappyLife: () => { return {} },
-      liveUnhappyLife: Function
+      salary: 130000
     },
     {
       id: 2,
-      firstName: "Petr",
-      lastName: "Petrov",
+      firstName: "Ivan",
+      lastName: "Ivanov",
       age: 46,
-      email: "p.petrov@gmail.com",
+      email: "i.ivanov@gmail.com",
       isAlive: true,
+      profession: "Manager",
       sex: Sex.MAN,
-      liveHappyLife: () => { return {} },
-      liveUnhappyLife: Function
+      salary: 250000
     },
     {
       id: 3,
-      firstName: "Anna",
-      lastName: "Petrova",
+      firstName: "Elena",
+      lastName: "Nikolaevna",
       age: 40,
-      email: "a.petrova@gmail.com",
+      email: "e.nikolaevna@gmail.com",
       isAlive: true,
+      profession: "Senior Software Developer",
       sex: Sex.WOMAN,
-      liveHappyLife: () => { return {} },
-      liveUnhappyLife: Function
+      salary: 200000
     }
   ]);
 

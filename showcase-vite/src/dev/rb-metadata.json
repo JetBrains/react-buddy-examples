@@ -1,0 +1,125 @@
+{
+  "components": {
+    "ResponsiveBar": {
+      "importAliases": [
+        "@nivo/bar"
+      ],
+      "categories": [
+        "Chart Settings"
+      ],
+      "props": {
+        "axisBottom": {
+          "category": "Chart Settings"
+        },
+        "axisTop": {
+          "category": "Chart Settings"
+        },
+        "axisLeft": {
+          "category": "Chart Settings"
+        },
+        "axisRight": {
+          "category": "Chart Settings"
+        },
+        "indexBy": {
+          "category": "Chart Settings"
+        },
+        "labelSkipWidth": {
+          "category": "Chart Settings"
+        },
+        "labelSkipHeight": {
+          "category": "Chart Settings"
+        },
+        "legends": {
+          "category": "Chart Settings"
+        }
+      }
+    },
+    "ResponsiveLine": {
+      "importAliases": [
+        "@nivo/line"
+      ],
+      "categories": [
+        "Chart Settings"
+      ],
+      "props": {
+        "axisBottom": {
+          "category": "Chart Settings"
+        },
+        "axisTop": {
+          "category": "Chart Settings"
+        },
+        "axisLeft": {
+          "category": "Chart Settings"
+        },
+        "axisRight": {
+          "category": "Chart Settings"
+        },
+        "xScale": {
+          "category": "Chart Settings"
+        },
+        "yScale": {
+          "category": "Chart Settings"
+        },
+        "lineWidth": {
+          "category": "Chart Settings"
+        },
+        "pointSize": {
+          "category": "Chart Settings"
+        },
+        "legends": {
+          "category": "Chart Settings"
+        }
+      }
+    },
+    "ResponsivePie": {
+      "importAliases": [
+        "@nivo/pie"
+      ],
+      "categories": [
+        "Chart Settings"
+      ],
+      "props": {
+        "axisBottom": {
+          "category": "Chart Settings"
+        },
+        "axisTop": {
+          "category": "Chart Settings"
+        },
+        "axisLeft": {
+          "category": "Chart Settings"
+        },
+        "axisRight": {
+          "category": "Chart Settings"
+        },
+        "legends": {
+          "category": "Chart Settings"
+        }
+      }
+    },
+    "ResponsiveScatterPlot": {
+      "importAliases": [
+        "@nivo/scatterplot"
+      ],
+      "categories": [
+        "Chart Settings"
+      ],
+      "props": {
+        "axisBottom": {
+          "category": "Chart Settings"
+        },
+        "axisTop": {
+          "category": "Chart Settings"
+        },
+        "axisLeft": {
+          "category": "Chart Settings"
+        },
+        "axisRight": {
+          "category": "Chart Settings"
+        },
+        "legends": {
+          "category": "Chart Settings"
+        }
+      }
+    }
+  }
+}
