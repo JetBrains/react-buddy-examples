@@ -74,32 +74,7 @@ export const PieChartTest = () => {
     }
   ];
 
-  const [pieData, setPieData] = useState<MayHaveLabel[]>([]);
-
-  useEffect(() => {
-    const mappedData = users.map(item => {
-      return {
-        id: item.profession,
-        label: item.firstName,
-        value: item.salary
-      }
-    })
-    setPieData(mappedData)
-  }, [users]);
-
   return (
-    <>
-      <div style={{
-        height: 400,
-        margin: '0 auto',
-        padding: 30,
-        width: 500,
-      }}>
-        <ResponsivePie
-          data={pieData}
-          margin={{top: 40, right: 80, bottom: 80, left: 80}}
-        />
-      </div>
-    </>
+    <></>
   );
 };

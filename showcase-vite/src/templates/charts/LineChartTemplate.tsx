@@ -92,34 +92,7 @@ export const LineChartTest = () => {
     }
   ];
 
-  const [lineData, setLineData] = useState<Serie[]>([]);
-
-  useEffect(() => {
-    const mappedData: Serie[] = departments.map(item => {
-      return {
-        id: item.department,
-        data: item.budgetPerYears.map(dataItem => {
-          return {x: dataItem.year, y: dataItem.budget}
-        })
-      }
-    })
-    setLineData(mappedData)
-  }, [departments]);
-
   return (
-    <>
-      <div style={{
-        height: 400,
-        margin: '0 auto',
-        padding: 30,
-        width: 500,
-      }}>
-        <ResponsiveLine
-          data={lineData}
-          curve={"linear"}
-          margin={{top: 20, right: 20, bottom: 60, left: 80}}
-        />
-      </div>
-    </>
+    <></>
   );
 };
