@@ -7,6 +7,8 @@ import {Sex, User} from "../types";
  **/
 export const CardListTemplate = () => {
 
+  /*vtl const keyProperty = ${card.keyProperty.name};*/
+
   /*vtl const testState: ${card.itemsVariableType} = ${card.itemsVariableName}*/
   /*vtl const testItemType: ${card.itemType} = ${card.itemsVariableName}[0]*/
   /*vtl const titleProperty = $quote${card.titleProperty.name}$quote*/

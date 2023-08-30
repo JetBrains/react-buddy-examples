@@ -6,11 +6,13 @@ import {Sex, User} from "../types";
  * For more information follow https://youtrack.haulmont.com/issue/RCB-468/Object-card-template-wizard
  **/
 export const CardTemplate = () => {
-  const itemVariableName = "/*vtl $card.itemsVariableName*/"
-  const itemType = "/*vtl $card.itemType*/"
-  const titleProperty = "/*vtl ${sQuote}${card.titleProperty.name}${sQuote}*/"
-  const subtitleProperty = "/*vtl ${sQuote}${card.subTitleProperty.name}${sQuote}*/"
-  const isOutlined = "/*vtl $card.outlined*/"
+  const itemVariableName = "/*vtl $card.itemsVariableName*/";
+  const itemType = "/*vtl $card.itemType*/";
+  const titleProperty = "/*vtl ${sQuote}${card.titleProperty.name}${sQuote}*/";
+  const subtitleProperty = "/*vtl ${sQuote}${card.subTitleProperty.name}${sQuote}*/";
+  const isOutlined = "/*vtl $card.outlined*/";
+  const isSolid = "/*vtl $card.solid*/";
+  const labelPosition = "/*vtl $card.labelPosition*/";
 
   /*Actions:*/
   /*vtl const actions: string[] = [*/
